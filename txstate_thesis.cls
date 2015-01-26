@@ -1,14 +1,7 @@
 %% Modified by D. East 2000/10/16 for UKY thesis and dissertation requirements
 %% Modified by J. High 2005/05/01 for TXSTATE thesis requirements
 %% Modified by David C. Anastasiu 2011/07/17 based on updated TXSTATE thesis requirements
-%% This is file book.cls
-%% generated with the docstrip utility.
-%%
-%% The original source files were:
-%%
-%% classes.dtx  (with options: book
-%%
-%% This is a generated file.
+%% Modified by Jared L. Wallace 2015/01/21 based on updated TXSTATE thesis requirements
 %%
 %% Copyright 1993 1994 1995 1996 1997 1998 1999
 %% The LaTeX3 Project and any individual authors listed elsewhere
@@ -20,25 +13,10 @@
 %% It may be distributed under the terms of the LaTeX Project Public
 %% License, as described in lppl.txt in the base LaTeX distribution.
 %% Either version 1.0 or, at your option, any later version.
-%% \CharacterTable
-%%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
-%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
-%%   Digits        \0\1\2\3\4\5\6\7\8\9
-%%   Exclamation   \!     Double quote  \" "    Hash (number) \#
-%%   Dollar        \$     Percent       \%     Ampersand     \&
-%%   Acute accent ' \'     Left paren    \(     Right paren   \)
-%%   Asterisk      \*     Plus          \+     Comma         \,
-%%   Minus         \-     Point         \.     Solidus       \/
-%%   Colon         \:     Semicolon     \;     Less than     \<
-%%   Equals        \=     Greater than  \>     Question mark \?
-%%   Commercial at \@     Left bracket  \[     Backslash     \\
-%%   Right bracket \]     Circumflex    \^     Underscore    \_
-%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
-%%   Right brace   \}     Tilde         \~}
-\NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{txstate_thesis}
-              [2005/05/01 modified from UKY thesis 2000/10/16 modified from book 1999/01/07 v1.4a
- Non Standard LaTeX document class]
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{txstate_thesis}[2015/01/21 Texas State University]
+
+
 \newcommand\@ptsize{}
 \newif\if@restonecol
 \newif\if@titlepage
