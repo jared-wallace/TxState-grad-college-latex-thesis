@@ -1,2 +1,8 @@
 *~
 *.swp
+*.aux
+*.log
+*.lol
+*.lot
+*.toc
+*.lof
