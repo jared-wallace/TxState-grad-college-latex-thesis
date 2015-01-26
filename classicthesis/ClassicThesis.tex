@@ -48,7 +48,10 @@
 % Note: Make all your adjustments in here
 %*******************************************************
 \input{classicthesis-config}
-
+\usepackage[top=2in, bottom=1in, left=1.5in, right=1in]{geometry}
+\deftripstyle{pgnumbottomcenter}{}{}{}{}{\pagemark{}}{}
+\pagestyle{pgnumbottomcenter}
+\renewcommand{\chapterpagestyle}{pgnumbottomcenter}
 %********************************************************************
 % Hyphenation
 %*******************************************************
@@ -68,7 +71,7 @@
 %********************************************************************
 % Frontmatter
 %*******************************************************
-\include{FrontBackmatter/DirtyTitlepage}
+%\include{FrontBackmatter/DirtyTitlepage}
 \include{FrontBackmatter/Titlepage}
 \include{FrontBackmatter/Titleback}
 \cleardoublepage\include{FrontBackmatter/Dedication}

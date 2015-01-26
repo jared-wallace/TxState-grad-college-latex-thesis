@@ -1,4 +1,6 @@
 *~
+*.tex~
+*.un~
 *.swp
 *.aux
 *.log
