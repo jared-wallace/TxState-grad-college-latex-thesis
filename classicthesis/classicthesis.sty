@@ -350,7 +350,9 @@
     \setheadsepline{0pt}
     \ifthenelse{\boolean{@nochapters}}%
         {\relax}%
-        {\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}}
+        {
+            %\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+        }
     \renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}} 
     \lehead{\mbox{\llap{\small\thepage\kern2em}\headmark\hfil}}
     \rohead{\mbox{\hfil{\headmark}\rlap{\small\kern2em\thepage}}}
@@ -368,29 +370,23 @@
 % layout of the chapter-, section-, subsection-, subsubsection-,
 % paragraph and description-headings
 % ********************************************************************             
-\RequirePackage{titlesec}
-		% parts
-		\ifthenelse{\boolean{@parts}}%
-		{%
-%		\newcommand{\ctparttext}{\relax}
-		\newcommand{\ct@parttext}{\relax} % Thanks to Ivo
-		\newcommand{\ctparttext}[1]{\renewcommand{\ct@parttext}{#1 \relax}} 
-    \titleformat{\part}[display]
-        {\normalfont\centering\large}%
-        {\thispagestyle{empty}\partname~\MakeTextUppercase{\thepart}}{1em}%
-        {\color{Maroon}\spacedallcaps}[\bigskip\normalfont\normalsize\color{Black}\begin{quote}\ct@parttext\end{quote}]
-    }{\relax}
-    % chapters
-    \ifthenelse{\boolean{@linedheaders}}%
-    {% lines above and below, number right
-    \titleformat{\chapter}[display]%             
-        {\relax}{\raggedleft{\color{halfgray}\chapterNumber\thechapter} \\ }{0pt}%
-        {\titlerule\vspace*{.9\baselineskip}\raggedright\spacedallcaps}[\normalsize\vspace*{.8\baselineskip}\titlerule]%
-    }{% something like Bringhurst  
-    \titleformat{\chapter}[display]%
-        {\relax}{\mbox{}\oldmarginpar{\vspace*{-3\baselineskip}\color{halfgray}\chapterNumber\thechapter}}{0pt}%
-        {\raggedright\spacedallcaps}[\normalsize\vspace*{.8\baselineskip}\titlerule]% 
+    \PassOptionsToPackage{tiny, center}{titlesec}
+    \RequirePackage{titlesec}
+    % parts
+    \ifthenelse{\boolean{@parts}}%
+    {
+        \newcommand{\ct@parttext}{\relax} % Thanks to Ivo
+        \newcommand{\ctparttext}[1]{\renewcommand{\ct@parttext}{#1 \relax}}
+        \titleformat{\part}[display]{\normalfont\centering\large}
+            {\thispagestyle{empty}\partname~\MakeTextUppercase{\thepart}}{1em}
+            {\color{Maroon}\spacedallcaps}[\bigskip\normalfont\normalsize\color{Black}\begin{quote}\ct@parttext\end{quote}]
     }
+    {
+        \relax
+    }
+    \titlespacing*{\chapter}{0pt}{-50pt}{20pt}
+    \titleformat{\chapter}[display]
+    {\center\bfseries}{\chaptertitlename\ \thechapter}{0pt}{}
     % sections \FloatBarrier
     \titleformat{\section}
         {\relax}{\textsc{\MakeTextLowercase{\thesection}}}{1em}{\spacedlowsmallcaps}

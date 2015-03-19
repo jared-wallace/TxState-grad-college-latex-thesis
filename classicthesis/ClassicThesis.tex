@@ -38,7 +38,7 @@
 %		 * [high] Check this out: http://www.golatex.de/koma-script-warnung-in-verbindung-mit-listings-package-t2058.html
 %    * [medium] mathbb in section-titles/chapter-titles => disappears somehow in headlines!!!
 % **************************************************************************************************************
-\documentclass[ dottedtoc,twoside,openright,titlepage,numbers=noenddot,headinclude,%1headlines,% letterpaper a4paper
+\documentclass[ dottedtoc,openright,titlepage,numbers=noenddot,headinclude,%1headlines,% letterpaper a4paper
                 footinclude=true,cleardoublepage=empty,abstractoff, % <--- obsolete, remove (todo)
                 BCOR=5mm,paper=a4,fontsize=11pt,%11pt,a4paper,%
                 ngerman,american,%
@@ -64,22 +64,17 @@
 \begin{document}
 \frenchspacing
 \raggedbottom
-\selectlanguage{american} % american ngerman
-%\renewcommand*{\bibname}{new name}
-%\setbibpreamble{}
+\selectlanguage{american}
 \pagenumbering{roman}
 \pagestyle{plain}
 %********************************************************************
 % Frontmatter
 %*******************************************************
-%\include{FrontBackmatter/DirtyTitlepage}
 \include{FrontBackmatter/Titlepage}
 \include{FrontBackmatter/Copyright}
 \include{FrontBackmatter/FairUse}
 \include{FrontBackmatter/Dedication}
 \include{FrontBackmatter/Acknowledgments}
-%\include{FrontBackmatter/Abstract}
-%\cleardoublepage\include{FrontBackmatter/Publication}
 \pagestyle{scrheadings}
 \include{FrontBackmatter/Contents}
 \include{FrontBackmatter/Abbreviations}
@@ -88,11 +83,8 @@
 % Mainmatter
 %*******************************************************
 \pagenumbering{arabic}
-%\setcounter{page}{90}
-% use \cleardoublepage here to avoid problems with pdfbookmark
-\cleardoublepage
+\newgeometry{top=1in, left=1.5in, right=1in,bottom=1in}
 \include{Chapters/Chapter01}
-\cleardoublepage
 \include{Chapters/Chapter02}
 \include{Chapters/Chapter03}
 % ********************************************************************
