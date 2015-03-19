@@ -212,11 +212,9 @@
 \ifthenelse{\boolean{@beramono}}%
     {\PassOptionsToPackage{scaled=0.85}{beramono}%
      \RequirePackage{beramono}}%
-    {%
-    	\relax%
-    	% put your own suitable typewriter font here
-    	%\renewcommand{\ttdefault}{\rmdefault}
-    } 
+    {
+        \RequirePackage{times}
+    }
 \ifthenelse{\boolean{@eulermath}}%
     {\PassOptionsToPackage{euler-digits}{eulervm}%
      \RequirePackage{eulervm}} % Euler math fonts
