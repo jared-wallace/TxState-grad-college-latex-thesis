@@ -412,6 +412,7 @@
 % ********************************************************************
 \PassOptionsToPackage{titles}{tocloft}
 	\RequirePackage{tocloft}
+    \setlength{\cftbeforetoctitleskip}{-50em}
     % avoid page numbers being right-aligned in fixed-size box              
     \newlength{\newnumberwidth}
     \settowidth{\newnumberwidth}{999} % yields overfull hbox warnings for pages > 999
@@ -554,11 +555,11 @@
     % dirty work-around to get the spacing after the toc/lot/lof-titles right    
     \ifthenelse{\boolean{@parts}}%        
     {%
-    		\AtBeginDocument{\addtocontents{toc}{\protect\vspace{-\cftbeforepartskip}}}
+    		%\AtBeginDocument{\addtocontents{toc}{\protect\vspace{-\cftbeforepartskip}}}
     }{%
         \ifthenelse{\boolean{@nochapters}}%
     		{\relax}%
-    		{\AtBeginDocument{\addtocontents{toc}{\protect\vspace{-\cftbeforechapskip}}}}
+            {\relax}%\AtBeginDocument{\addtocontents{toc}{\protect\vspace{-\cftbeforechapskip}}}}
     }
                                        
     % another dirty work-around to get the spaced low small caps into the toc ;-(
