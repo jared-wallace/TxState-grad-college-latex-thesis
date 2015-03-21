@@ -1,14 +1,18 @@
-\begin{thebibliography}{1}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+\begin{thebibliography}{}
 
-\bibitem[Bringhurst(2008)]{bringhurst:2002}
-Robert Bringhurst.
-\newblock \emph{{T}he {E}lements of {T}ypographic {S}tyle}.
-\newblock Version 3.2. Hartley \& Marks Publishers, Point Roberts, WA, USA,
-  2008.
+\bibitem[\protect\astroncite{Bringhurst}{2008}]{bringhurst:2002}
+Bringhurst, R. (2008).
+\newblock {\em {T}he {E}lements of {T}ypographic {S}tyle}.
+\newblock Version 3.2. Hartley \& Marks Publishers, Point Roberts, WA, USA.
+
+\bibitem[\protect\astroncite{Knuth}{1976}]{knuth:1976}
+Knuth, D.~E. (1976).
+\newblock {B}ig {O}micron and {B}ig {O}mega and {B}ig {T}heta.
+\newblock {\em SIGACT News}, 8(2):18--24.
+
+\bibitem[\protect\astroncite{Sommerville}{1992}]{sommerville:1992}
+Sommerville, I. (1992).
+\newblock {\em {S}oftware {E}ngineering}.
+\newblock Addison-Wesley, Boston, MA, USA, 4th edition.
 
 \end{thebibliography}
