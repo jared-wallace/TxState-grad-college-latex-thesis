@@ -81,26 +81,27 @@ of the requirements for the degree of\xspace}
 \setlength{\cftbeforetoctitleskip}{-3em}
 % dotted leaders for chapters
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
 % center, regular font, bold title
 \renewcommand{\cfttoctitlefont}{}
 \renewcommand{\contentsname}{\hfill\bfseries TABLE OF CONTENTS\hfill}
 \renewcommand{\cftaftertoctitle}{\hfill\\\null\hfill\textbf{Page}}
-% regular font for parts
+% regular font and spacing for parts
 \renewcommand{\cftpartfont}{}
 \renewcommand{\cftpartpagefont}{}
+\setlength{\cftbeforepartskip}{0em}
 % regular font for chapters
 \renewcommand{\cftchapfont}{}
 \renewcommand{\cftchappagefont}{}
-% have same indentation on all levels
-\cftsetindents{section}{0in}{.5in}
-\cftsetindents{chapter}{.5in}{.5in}
+% Fixing indentation
+\cftsetindents{section}{1.5em}{2.3em}
+\cftsetindents{chapter}{1em}{1.5em}
 \cftsetindents{part}{0in}{.5in}
 % more hacks to get chapter heading
 \newcommand{\mychapter}[2]{
     \setcounter{chapter}{#1}
     \setcounter{section}{0}
-    %\section*{#2}
-    \addcontentsline{toc}{section}{#2}
+    \addcontentsline{toc}{part}{#2}
 }
 % ****************************************************************************************************
 
