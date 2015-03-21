@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bringhurst(2008)]{bringhurst:2002}
+Robert Bringhurst.
+\newblock \emph{{T}he {E}lements of {T}ypographic {S}tyle}.
+\newblock Version 3.2. Hartley \& Marks Publishers, Point Roberts, WA, USA,
+  2008.
+
+\end{thebibliography}
