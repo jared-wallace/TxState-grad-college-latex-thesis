@@ -93,10 +93,15 @@ of the requirements for the degree of\xspace}
 % regular font for chapters
 \renewcommand{\cftchapfont}{}
 \renewcommand{\cftchappagefont}{}
+% Add period after chapter number
+\renewcommand{\cftchapaftersnum}{.}
 % Fixing indentation
-\cftsetindents{section}{1.5em}{2.3em}
-\cftsetindents{chapter}{1em}{1.5em}
+\cftsetindents{section}{4em}{1.5em}
+\cftsetindents{subsection}{6em}{1.5em}
+\cftsetindents{chapter}{2em}{1.5em}
 \cftsetindents{part}{0in}{.5in}
+% Roman numerals for chapters
+\renewcommand\thechapter{\Roman{chapter}}
 % more hacks to get chapter heading
 \newcommand{\mychapter}[2]{
     \setcounter{chapter}{#1}
