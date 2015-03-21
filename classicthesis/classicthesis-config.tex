@@ -77,12 +77,15 @@ of the requirements for the degree of\xspace}
 \renewcommand{\bflabel}[1]{{#1}\hfill} % fix the list of acronyms
 \usepackage{scrpage2}
 \usepackage{tocloft}
+%******************************************************************************
+% The following are all hacks for the Table of Contents
+%******************************************************************************
 % spacing before contents heading
 \setlength{\cftbeforetoctitleskip}{-3em}
 % dotted leaders for chapters
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 \renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
-% center, regular font, bold title
+% center, regular font, bold title, for Table of Contents
 \renewcommand{\cfttoctitlefont}{}
 \renewcommand{\contentsname}{\hfill\bfseries TABLE OF CONTENTS\hfill}
 \renewcommand{\cftaftertoctitle}{\hfill\\\null\hfill\textbf{Page}}
@@ -108,11 +111,23 @@ of the requirements for the degree of\xspace}
     \setcounter{section}{0}
     \addcontentsline{toc}{part}{#2}
 }
+%******************************************************************************
+% Bibliography hacks
+%******************************************************************************
 \newcommand\mybibname{\normalfont{REFERENCES}}
 \renewcommand\bibsection{%
    \clearpage
    \markboth{\MakeUppercase{\mybibname}}{\MakeUppercase{\mybibname}}%
   }
+
+%******************************************************************************
+% Section and chapter font hacks
+%******************************************************************************
+  \usepackage[explicit]{titlesec}
+\usepackage[normalem]{ulem}
+\titleformat{\section}{\center\normalfont\fontsize{12}{15}}{\thesection}{1em}{\uline{#1}}
+\titleformat{\chapter}{\center\normalfont\fontsize{12}{15}\bfseries}{\thechapter .}{1em}{#1}
+\titleformat{\subsection}{\normalfont\fontsize{12}{15}}{\thesubsection}{1em}{\uline{#1}}
 % ****************************************************************************************************
 
 
