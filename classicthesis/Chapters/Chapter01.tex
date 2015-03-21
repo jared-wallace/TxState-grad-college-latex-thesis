@@ -1,23 +1,44 @@
 %************************************************
 \addtocontents{toc}{\cftpagenumbersoff{part}}
 \addcontentsline{toc}{part}{CHAPTER}
-\chapter{Introduction}\label{ch:introduction}
+\chapter{INTRODUCTION}\label{ch:introduction}
 %************************************************
-This bundle for \LaTeX\ has two goals:
+This template for \LaTeX\ is designed to make formatting your thesis as painless as possible.
+\section*{Organization}
+\addcontentsline{toc}{section}{Organization}
+A very important factor for successful thesis writing is the
+organization of the material. This template suggests a structure as
+the following:
+\begin{itemize}
+\item\texttt{Chapters/} is where all the ``real'' content goes in
+separate files such as \texttt{Chapter01.tex} etc.
+\item\texttt{FrontBackMatter/} is where all the stuff goes that
+surrounds the ``real'' content, such as the acknowledgments,
+dedication, etc.
+\item\texttt{gfx/} is where you put all the graphics you use in
+the thesis. Maybe they should be organized into subfolders
+depending on the chapter they are used in, if you have a lot of
+graphics.
+\item\texttt{Bibliography.bib}: the Bib\TeX\ database to organize
+all the references you might want to cite.
+\item\texttt{ClassicThesis.tex}: the main file of your thesis
+where all gets bundled together.
+\item\texttt{classicthesis-config.tex}: a central place to load all
+nifty packages that are used. In there, you can also activate
+backrefs in order to have information in the bibliography about
+where a source was cited in the text (\ie, the page number).
+\emph{Make your changes and adjustments here.}
+You also adjust the title of your thesis, your name, and all
+similar information here.
+\end{itemize}
+In total, this should get you started in no time.
+\section*{Citations}
+\addcontentsline{toc}{section}{Citations}
+In-text citations are fairly straightforward:
 \begin{enumerate}
-    \item Provide students with an easy-to-use template for their
-    Master's
-    or PhD thesis. (Though it might also be used by other types of
-    authors
-    for reports, books, etc.)
-    \item Citations are easy to make. \citep[][p. 123]{bringhurst:2002}
-    \item Another citation. \citep[][p. 12]{knuth:1976}
-    \item One more. \citep{sommerville:1992}
+    \item Standard citation. \citep[][p. 123]{bringhurst:2002}
+    \item According to Donald Knuth \citeyearpar{knuth:1976}, the "C language rocks". (p. 12)
 \end{enumerate}
-
-\section*{test section}
-\addcontentsline{toc}{section}{test section}
-some text here
 \subsection*{test subsection}
 \addcontentsline{toc}{subsection}{test subsection}
 some extra text here

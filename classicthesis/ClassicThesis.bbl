@@ -1,5 +1,10 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\astroncite{Bentley}{1999}]{bentley:1999}
+Bentley, J. (1999).
+\newblock {\em {P}rogramming {P}earls}.
+\newblock Addison--Wesley, Boston, MA, USA, 2nd edition.
+
 \bibitem[\protect\astroncite{Bringhurst}{2008}]{bringhurst:2002}
 Bringhurst, R. (2008).
 \newblock {\em {T}he {E}lements of {T}ypographic {S}tyle}.
@@ -9,10 +14,5 @@ Bringhurst, R. (2008).
 Knuth, D.~E. (1976).
 \newblock {B}ig {O}micron and {B}ig {O}mega and {B}ig {T}heta.
 \newblock {\em SIGACT News}, 8(2):18--24.
-
-\bibitem[\protect\astroncite{Sommerville}{1992}]{sommerville:1992}
-Sommerville, I. (1992).
-\newblock {\em {S}oftware {E}ngineering}.
-\newblock Addison-Wesley, Boston, MA, USA, 4th edition.
 
 \end{thebibliography}

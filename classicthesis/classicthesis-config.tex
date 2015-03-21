@@ -112,6 +112,20 @@ of the requirements for the degree of\xspace}
     \addcontentsline{toc}{part}{#2}
 }
 %******************************************************************************
+% List of figures formatting hacks
+%******************************************************************************
+\setlength{\cftbeforeloftitleskip}{-3em}
+% center, regular font, bold title
+\renewcommand{\cftloftitlefont}{}
+\renewcommand{\listfigurename}{\hfill\bfseries LIST OF FIGURES\hfill}
+%******************************************************************************
+% List of tables formatting hacks
+%******************************************************************************
+\setlength{\cftbeforelottitleskip}{-3em}
+% center, regular font, bold title
+\renewcommand{\cftlottitlefont}{}
+\renewcommand{\listtablename}{\hfill\bfseries LIST OF TABLES\hfill}
+%******************************************************************************
 % Bibliography hacks
 %******************************************************************************
 \newcommand\mybibname{\normalfont{REFERENCES}}
@@ -136,8 +150,6 @@ of the requirements for the degree of\xspace}
 % ****************************************************************************************************
 \usepackage{tabularx} % better tables
 	\setlength{\extrarowheight}{3pt} % increase table row height
-\newcommand{\tableheadline}[1]{\multicolumn{1}{c}{\spacedlowsmallcaps{#1}}}
-\newcommand{\myfloatalign}{\centering} % to be used with each float for alignment
 \usepackage{caption}
 \captionsetup{format=hang,font=small}
 \usepackage{subfig}  
