@@ -1,0 +1,49 @@
+\documentclass[ dottedtoc,oneside,openright,titlepage,numbers=noenddot,
+                headinclude,letterpaper,footinclude=true,cleardoublepage=empty,
+                abstractoff,paper=letterpaper,fontsize=12pt,ngerman,american,
+              ]{scrreprt}
+
+%******************************************************************************
+% Note: Make all your adjustments in here
+%******************************************************************************
+\usepackage{setspace}
+\input{txstate-grad-config}
+\usepackage[top=2in, bottom=1in, left=1.5in, right=1in]{geometry}
+\begin{document}
+\frenchspacing
+\raggedbottom
+\pagenumbering{roman}
+\pagestyle{plain}
+%******************************************************************************
+% Frontmatter
+%******************************************************************************
+\include{FrontBackmatter/Titlepage}
+\include{FrontBackmatter/Copyright}
+\include{FrontBackmatter/FairUse}
+\include{FrontBackmatter/Dedication}
+\pagestyle{scrheadings}
+\include{FrontBackmatter/Acknowledgments}
+\include{FrontBackmatter/Contents}
+\include{FrontBackmatter/Abbreviations}
+\include{FrontBackmatter/Abstract}
+%******************************************************************************
+% Mainmatter
+%******************************************************************************
+\pagenumbering{arabic}
+\include{Chapters/Chapter01}
+\include{Chapters/Chapter02}
+\include{Chapters/Chapter03}
+% *****************************************************************************
+% Backmatter
+%******************************************************************************
+\appendix
+\include{Chapters/Chapter0A}
+%******************************************************************************
+% Other Stuff in the Back
+%******************************************************************************
+\include{FrontBackmatter/Bibliography}
+% *****************************************************************************
+% Game Over: Restore, Restart, or Quit?
+%******************************************************************************
+\end{document}
+% *****************************************************************************
