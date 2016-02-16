@@ -42,3 +42,4 @@ None known at this time. Bugs can be reported to jared@jared-wallace.com.
 Author
 ------
 Jared Wallace, 2015
+Apan Qasem, 2016
