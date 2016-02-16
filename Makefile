@@ -2,10 +2,10 @@ all: *.tex FrontBackmatter/*.tex Chapters/*.tex
 	rm -rf *.aux
 	rm -rf FrontBackmatter/*.aux
 	rm -rf Chapters/*.aux
-	pdflatex txstate-grad.tex
-	bibtex txstate-grad
-	pdflatex txstate-grad.tex
-	pdflatex txstate-grad.tex
+	pdflatex txstate_thesis.tex
+	bibtex txstate_thesis
+	pdflatex txstate_thesis.tex
+	pdflatex txstate_thesis.tex
 clean:
 	rm -rf *.aux
 	rm -rf *.log

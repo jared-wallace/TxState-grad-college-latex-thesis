@@ -1,0 +1,71 @@
+\documentclass[ dottedtoc,oneside,openright,titlepage,numbers=noenddot,headinclude,letterpaper
+                footinclude=true,cleardoublepage=empty,abstractoff,
+                paper=letterpaper,fontsize=12pt,
+                ngerman,american,
+                ]{scrreprt}
+
+%********************************************************************
+% Note: Make all your adjustments in here
+%*******************************************************
+\usepackage{setspace}
+\input{txstate_thesis_config}
+\usepackage[top=2in, bottom=1in, left=1.5in, right=1in]{geometry}
+%********************************************************************
+% Hyphenation
+%*******************************************************
+
+% ********************************************************************
+% GO!GO!GO! MOVE IT!
+%*******************************************************
+\usepackage{ragged2e}
+\begin{document}
+\frenchspacing
+\raggedbottom
+\pagenumbering{roman}
+\pagestyle{plain}
+%********************************************************************
+% Frontmatter
+%*******************************************************
+\include{FrontBackmatter/Titlepage}
+\include{FrontBackmatter/Copyright}
+\include{FrontBackmatter/FairUse}
+% left-justfiy Dedication and Acknowledgments
+\raggedright
+\include{FrontBackmatter/Dedication}
+%\pagestyle{scrheadings}
+\include{FrontBackmatter/Acknowledgments}
+% TOC is full justified, specified internally
+\include{FrontBackmatter/Contents}
+
+% left-justfiy remainder of document
+\raggedright
+\include{FrontBackmatter/Abbreviations}
+\include{FrontBackmatter/Abstract}
+%********************************************************************
+% Mainmatter
+%*******************************************************
+\pagenumbering{arabic}
+%*********************************************************************
+% Ugly hack
+%*******************************************************
+\newgeometry{top=1in, bottom=1in, left=1.5in, right=1in}
+\doublespacing
+\include{Chapters/Chapter01}
+\include{Chapters/Chapter02}
+\include{Chapters/Chapter03}
+% ********************************************************************
+% Backmatter
+%*******************************************************
+\appendix
+\include{Chapters/Chapter0A}
+%********************************************************************
+% Other Stuff in the Back
+%*******************************************************
+\singlespacing
+\include{FrontBackmatter/Bibliography}
+
+% ********************************************************************
+% Game Over: Restore, Restart, or Quit?
+%*******************************************************
+\end{document}
+% ********************************************************************
